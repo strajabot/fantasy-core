@@ -1,0 +1,29 @@
+plugins {
+    id 'java-library'
+    id 'io.papermc.paperweight.userdev' version '1.1.12-LOCAL-SNAPSHOT'
+}
+
+group = 'me.stradix'
+version = '1.0-ALPHA'
+
+dependencies {
+    paperweightDevelopmentBundle("io.papermc.paper:dev-bundle:1.17.1-R0.1-SNAPSHOT")
+}
+
+tasks {
+    // Run reobfJar on build
+    build {
+        dependsOn(reobfJar)
+    }
+
+    compileJava {
+        options.encoding = "UTF-8"
+        options.release.set(16)
+    }
+    javadoc {
+        options.encoding = "UTF-8"
+    }
+    processResources {
+        filteringCharset = "UTF-8"
+    }
+}

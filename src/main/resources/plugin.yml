@@ -1,0 +1,8 @@
+name: FantasyCore
+version: @version@
+main: me.stradix.fantasycore.FantasyCore
+api-version: 1.17
+prefix: [ FantasyCore ]
+load: STARTUP
+authors: [ strajabot, obito17 ]
+description: Core plugin for our RPG server
